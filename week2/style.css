@@ -149,8 +149,19 @@ main h3 {
     padding: 25px;
     background-color: #ADD8E6;
     margin-top: 25px;
-    font-size: 18px;
+    border-style: solid;
+    boarder-width: 10px;
+    border-color: #dd0707
+   
 
+}
+.cta-container h2{
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.cta-container p{
+    font-size: 15px;
+    font-weight: lighter;
 }
 
 .cta-button {
@@ -163,7 +174,7 @@ main h3 {
     font-weight: bold;
     margin-top: 20px;
     transition: background-color 0.3s;
-    font-size: 20px;
+    cursor: pointer; 
 }
 
 .cta-button:hover {
