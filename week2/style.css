@@ -149,7 +149,7 @@ main h3 {
 .cta-button {
    display: inline-block;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #0000FF;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
@@ -159,7 +159,7 @@ main h3 {
 }
 
 .cta-button:hover {
-    background-color: #7640B3;
+    background-color: #0000FF;
 }
 
 /* Footer Styles */
