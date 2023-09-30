@@ -43,6 +43,12 @@ nav ul {
     margin: 0;
     padding: 20px;
 }
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  background-color: #333; 
+  z-index: 100;
+}
 
 nav li {
     display: inline-block;
