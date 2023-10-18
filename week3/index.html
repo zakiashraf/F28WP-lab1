@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wanderlust Voyages | Travel Agency</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css"> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Young+Serif&display=swap" rel="stylesheet">
 </head>
 
-<body> 
+<body>
   <!-- Main Container -->
   <div>
 
@@ -19,25 +20,23 @@
       <h1 class="headeraH1">Wanderlust Voyages | Travel Agency</h1>
     </header>
 
-    <!-- Navigation Section -->
-    <nav class="sticky-nav">
+   <!— Navigation Section —>
+<nav class=“sticky-nav”>
   <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="tasks.html">Tasks</a></li>
+    <li><a href=“index.html”>Home</a></li>
+    <li><a href=“about.html”>About</a></li>
+    <li><a href=“services.html”>Services</a></li>
+    <li><a href=“gallery.html”>Gallery</a></li>
+    <li><a href=“contact.html”>Contact</a></li>
+    <li><a href=“tasks.html”>Tasks</a></li>
   </ul>
 </nav>
 
-
-
     <!-- Banner Section -->
     <section class="banner-container">
-      <img src="images/travel banner.svg" alt="Illustrative banner of travel destinations" class="centered-banner" loading="lazy">
-
-    </section>
+<img name="slide" alt="Alt goes here" title="Title goes here"
+width="70%"/>
+</section>
 
     <!-- Main Content Section -->
     <main class="services">
@@ -67,7 +66,7 @@
           <div class="service-column">
             <img src="images/ladies facial.png" alt="Illustration of a hotel">
             <h3>Accommodation Reservations</h3>
-            <p>Travel agencies have partnerships and affiliations with a wide range of hotels.</p>
+            <p>Numerous hotels are affiliated and partnered with travel firms.</p>
           </div>
 
           <div class="service-column">
@@ -79,7 +78,7 @@
           <div class="service-column">
             <img src="images/reservation.png" alt="Illustration representing activities and excursions">
             <h3>Activity & Excursion Bookings</h3>
-            <p>We curate and book a diverse range of local activities and excursions for unforgettable experiences.</p>
+            <p>We select and reserve a wide variety of regional excursions and activities for life-changing experiences.</p>
           </div>
 
         </div>
@@ -95,7 +94,7 @@
       <section class="cta-container">
         <h2>Ready to Experience Our Services?</h2>
         <p>Join us today and discover the difference we can make for you!</p>
-         <a href="form.html" class="cta-button"><span>Contact Us Now</span></a>
+        <a href="form.html" class="cta-button"><span>Contact Us Now</span></a>
       </section>
 
     </main>
@@ -110,5 +109,38 @@
       <p>&copy; 2024 Wanderlust Voyages | Travel Agency. All rights reserved.</p>
     </footer>
   </div>
+  <script>
+       var i = 0; 			// Start Point
+var images = [];	// Images Array
+var time = 3000;	// Time Interval Between Switch
+	 
+// Image List
+images[0] = "images/image1.jpeg";
+images[1] = "images/image2.jpeg";
+images[2] = "images/image3.jpeg";
+images[3] = "images/image4.jpeg";
+images[4] = "images/image5.jpeg";
+
+// Change Image
+function changeImg(){
+	document.slide.src = images[i];
+
+	// Check If Index Is Under Max
+	if(i < images.length - 1){
+	  // Add 1 to Index
+	  i++; 
+	} else { 
+		// Reset Back To O
+		i = 0;
+	}
+
+	// Run function every x seconds
+	setTimeout("changeImg()", time);
+}
+
+// Run function when page loads
+window.onload=changeImg;
+
+      </script>
 </body>
 </html>
