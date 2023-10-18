@@ -211,9 +211,53 @@ footer a:hover {
 footer p {
     margin: 10px 0 0;
 }
-/* Style for the form: setting width, auto margin for centering, padding,
-background color, border radius for rounded corners, and font size */
-#form {
+* {
+    box-sizing: border-box;
+    }
+    .slideshow-img {
+    vertical-align: middle;
+    width: 100%;
+    }
+    /* Position the image container (needed to position the left and right
+    arrows) */
+    .container {
+    position: relative;
+    }
+    /* Hide the images by default */
+    .mySlides {
+    display: none;
+    }
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+    cursor: pointer;
+    }
+    /* Next & previous buttons */
+    .prev,
+    .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    }
+    /* Position the "next button" to the right */
+    .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    }
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    }
+    #form {
         width: 300px;
         margin: 20vh auto 0 auto; /* This centers the form vertically and
         horizontally */
@@ -231,7 +275,7 @@ background color, border radius for rounded corners, and font size */
             padding: 10px;
             margin-top: 10px; /* Space above the button */
             width: 100%; /* Make the button expand the full width of the form */
-            color: black; /* White text color for the button */
+            color: white; /* White text color for the button */
             background-color: rgb(41, 57, 194); /* Blue background color for the button
             */
             border: none; /* Remove the default border */
