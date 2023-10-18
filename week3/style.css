@@ -231,7 +231,7 @@ background color, border radius for rounded corners, and font size */
             padding: 10px;
             margin-top: 10px; /* Space above the button */
             width: 100%; /* Make the button expand the full width of the form */
-            color: white; /* White text color for the button */
+            color: black; /* White text color for the button */
             background-color: rgb(41, 57, 194); /* Blue background color for the button
             */
             border: none; /* Remove the default border */
