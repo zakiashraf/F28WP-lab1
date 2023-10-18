@@ -1,0 +1,343 @@
+/* ================================
+   Global Styles
+================================ */
+
+body, html {
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gabarito', cursive;
+    color: #23112e;
+    font-size: 1.09rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================================
+   Header Styles
+================================ */
+
+header {
+    display: flex;
+    align-items: center;
+    background: #ffffffd9;
+    padding: 20px;
+    transition: height 0.3s ease;
+}
+
+.logo-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.logo {
+    max-width: 100%;
+    height: 117px; 
+    padding-left: 4rem;
+}
+
+.nav-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    display: block;
+    font-weight: 700;
+    color: #23112e;
+    text-align: center;
+    padding: 14px 25px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+nav li a img {
+    height: 24px;
+    width: auto;
+    vertical-align: middle;
+}
+
+nav a:hover {
+    background: #4600462a;
+    color: #730577;
+}
+
+nav a.active {
+    color: #9900a7;
+}
+
+/* ================================
+   Banner Styles
+================================ */
+
+.banner-container {
+    display: flex; /* This will make its children use flexbox layout */
+    justify-content: center; /* This will center its children horizontally */
+    align-items: center; /* This will center its children vertically */
+}
+
+.banner img {
+    align-content: center;
+    width: 100%; /* Set the desired width in pixels */
+    height: 80%; /* Set the desired height in pixels */
+    display: block;
+}
+
+/* ================================
+   Main Content Styles
+================================ */
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.services {
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.service-column {
+    flex-basis: calc(50% - 50px);
+    max-width: calc(50% - 50px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.service-column img {
+    width: 90%;
+    height: auto;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-column:hover img {
+    transform: scale(1.09);
+}
+
+/* Mobile Responsiveness: Media Queries */
+
+@media (max-width: 800px) {
+    .service-column {
+        flex-basis: calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* Make header content stack vertically */
+        height: auto; /* Adjust height based on content */
+        padding: 10px; /* Adjust padding if needed */
+    }
+
+    .logo-container, .nav-container {
+        width: 100%; /* Take full width of the header */
+        text-align: center; /* Center the logo and navigation links */
+    }
+        nav ul {
+            display: flex; /* Use flexbox to arrange list items in a row */
+            flex-wrap: wrap; /* Allow the items to wrap to the next line if necessary */
+            justify-content: space-around; /* Distribute space around items */
+            padding: 10px 0; /* Adjust padding if needed */
+    }
+
+    nav li {
+        margin: 0 3px; /* Adjust horizontal margins */
+        flex: 1; /* Allow each item to take up an equal amount of space */
+        text-align: center; /* Center the text within the item */
+    }
+
+    .logo {
+        height: 60px; /* Further reduction for smaller screens */
+    }
+
+    .service-column {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
+
+/* ================================
+   Call to Action Styles
+================================ */
+
+.cta-container {
+    text-align: center;
+    padding: 4rem;
+    background-color: #fdedfb;
+    margin-top: 30px;
+    border: 1px dotted #ffcaf8;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 20px 40px;
+    background: linear-gradient(15deg, #350158, #af23ae);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background: linear-gradient(45deg, #af23ae, #350158);
+    color: #ffcaf8;
+}
+
+/* ================================
+   Footer Styles
+================================ */
+
+footer {
+    background: linear-gradient(15deg, #350158, #af23ae);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer ul {
+    margin: 0;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #b3b3b3;
+}
+
+
+/* ================================
+   Gallery Slide show Style
+================================ */
+
+
+* {
+    box-sizing: border-box;
+  }
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+    align-content: center;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  .mySlides img{
+    width: 100%;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: rgb(184, 0, 166);
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 0 3px 3px 0;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: rgb(184, 0, 166);
+    font-size: 25px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
