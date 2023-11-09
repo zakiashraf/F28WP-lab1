@@ -1,9 +1,10 @@
-https://github.com/zakiashraf/F28WP-lab1/edit/main/week4/cities1.json
+https://zakiashraf.github.io/F28WP-lab1/cities1.json
+
 var cityContainer = document.getElementById("city-info");
 var btn = document.getElementById("btn");
 btn.addEventListener("click", function(){
 var ourRequest = new XMLHttpRequest();
-ourRequest.open('GET', 'https://github.com/zakiashraf/F28WP-lab1/edit/main/week4/cities1.json');
+ourRequest.open('GET', 'https://zakiashraf.github.io/F28WP-lab1/cities1.json');
 ourRequest.onload = function() {
 var ourData = JSON.parse(ourRequest.responseText);
 renderHTML(ourData);
